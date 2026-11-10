@@ -48,6 +48,8 @@ p { margin: 0 0 1em; }
 .hero a:not(.button) { color: #fff; }
 .hero .button { background: #fff; color: var(--navy-dark); }
 .hero .button:hover { background: var(--sky-light); color: var(--navy-dark); }
+.hero .person { flex-wrap: wrap; align-items: flex-start; }
+.hero .person > div { flex: 1 1 260px; }
 .hero .headshot { flex-basis: 112px; width: 112px; height: 112px; border: 3px solid rgba(255,255,255,0.85); }
 
 .section { padding: 40px 0; border-bottom: 1px solid var(--line); }
