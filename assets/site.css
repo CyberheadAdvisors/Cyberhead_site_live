@@ -28,10 +28,21 @@ p { margin: 0 0 1em; }
 
 .site-header { border-bottom: 1px solid var(--line); }
 .site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-top: 16px; padding-bottom: 16px; }
-.brand { font-family: var(--serif); font-size: 21px; color: var(--ink); text-decoration: none; }
+.brand { display: block; text-decoration: none; }
+.brand img { display: block; height: 36px; width: auto; }
+.nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; padding: 10px; margin-right: -10px; cursor: pointer; }
+.nav-toggle-bar { display: block; height: 2px; background: var(--ink); margin: 5px 0; border-radius: 1px; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
 .nav a { color: var(--muted); text-decoration: none; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--navy); }
+
+@media (max-width: 639px) {
+  .brand img { height: 28px; }
+  .js .nav-toggle { display: block; }
+  .js .nav { display: none; width: 100%; flex-direction: column; gap: 0; }
+  .js .nav.open { display: flex; }
+  .js .nav a { padding: 10px 0; border-top: 1px solid var(--line); }
+}
 
 .hero {
   padding: 72px 0 64px;
@@ -97,3 +108,29 @@ p { margin: 0 0 1em; }
 .site-footer { background: var(--navy-dark); padding: 28px 0 40px; font-size: 14px; color: var(--sky-light); }
 .site-footer a { color: #fff; }
 .site-footer p { margin: 0; }
+
+/* The CISO Centre pages: same components, green colours */
+.brand-ciso { --navy: #0E6E6A; --navy-dark: #0A4F4C; --panel: #D8F0EE; --sky: #9FD6D2; --sky-light: #D8F0EE; }
+.brand-ciso .brand img { height: 50px; }
+@media (max-width: 639px) {
+  .brand-ciso .brand img { height: 40px; }
+}
+.price-tag { font-weight: 500; color: var(--navy-dark); margin: 10px 0 0; }
+
+/* Deal timeline: drawn as a line with stage markers; stacks on phones */
+.timeline { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 6px; right: 6px; top: 7px; height: 2px; background: var(--sky); }
+.timeline li { position: relative; padding-top: 26px; }
+.timeline li::before { content: ""; position: absolute; left: 0; top: 0; width: 12px; height: 12px; border-radius: 50%; background: #fff; border: 3px solid var(--navy); }
+.timeline .stage { display: block; font-family: var(--serif); font-size: 18px; color: var(--navy-dark); margin-bottom: 4px; }
+.timeline .role { display: block; font-size: 15px; color: var(--muted); line-height: 1.4; }
+@media (max-width: 639px) {
+  .timeline { grid-template-columns: 1fr; gap: 18px; padding-left: 26px; }
+  .timeline::before { left: 6px; right: auto; top: 6px; bottom: 6px; width: 2px; height: auto; }
+  .timeline li { padding-top: 0; }
+  .timeline li::before { left: -26px; top: 4px; }
+}
+
+/* Section illustrations */
+.illus { display: block; width: 100%; max-width: 560px; height: auto; margin: 4px 0 20px; }
+.illus-small { max-width: 240px; }
