@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
+# Allow AI search engines & assistants to retrieve and cite your content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://cyberhead.co.uk/sitemap.xml
