@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cyberhead.co.uk/</loc></url>
-  <url><loc>https://cyberhead.co.uk/deals/</loc></url>
-  <url><loc>https://cyberhead.co.uk/founders/</loc></url>
-  <url><loc>https://cyberhead.co.uk/buying-a-business/</loc></url>
+  <url><loc>https://cyberhead.co.uk/fit/</loc></url>
+  <url><loc>https://cyberhead.co.uk/fund/</loc></url>
+  <url><loc>https://cyberhead.co.uk/scale/</loc></url>
+  <url><loc>https://cyberhead.co.uk/buy/</loc></url>
+  <url><loc>https://cyberhead.co.uk/sell/</loc></url>
+  <url><loc>https://cyberhead.co.uk/rapid-check/</loc></url>
   <url><loc>https://cyberhead.co.uk/about/</loc></url>
 </urlset>
